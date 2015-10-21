@@ -363,8 +363,9 @@ The response is a JSON object.
 
 ## Experimental: Admin Endpoints
 Needs more work.
+
 | Method  | API    | Description   | Request Requirements | Response 
-| ------- |:-------|:-------------:| -----:| -----:|
+| -------  | ------------| -----| -----| -----|
 | GET | /oauth/admin                | display all database informations, create and delete clients | | html
 | POST | /oauth/admin/client/create | create new client  | `id` in query | redirects `back`
 | POST | /oauth/admin/client/remove | delete client      | `id` in query | redirects `back`
@@ -372,8 +373,9 @@ Needs more work.
 ## Dialog Data
 When the **Dialog Handler** is called the `$.data`  object can have the following values based on what was sent to the `authorizationRequest` API Endpoint :
 
+
 | Data     | Value Type | Value  | Extracted From  |
-| -------  | ------------:| -----:|
+| -------  | ------------| -----| -----|
 | $.**data**.**client_id** | Variable String | Client ID | Query String
 | $.**data**.**client** | Database Model | `Client` | Database
 | $.**data**.**response_type** | Variable String | `code` or `token` | Query String
