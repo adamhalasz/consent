@@ -33,8 +33,8 @@ var consent = require('consent')()
  8. Consent Dialog API
  9. Database Models
  10. Dialog Data
- 11. Experimental: Admin Endpoints
  12. Guidelines for Dialog Screen Designers
+ 13. Experimental: Admin Endpoints
  13. Todos
  14. Contribution
  15. License
@@ -361,15 +361,6 @@ The response is a JSON object.
 }
 ```
 
-## Experimental: Admin Endpoints
-Needs more work.
-
-| Method  | API    | Description   | Request Requirements | Response 
-| -------  | ------------| -----| -----| -----|
-| GET | /oauth/admin                | display all database informations, create and delete clients | | html
-| POST | /oauth/admin/client/create | create new client  | `id` in query | redirects `back`
-| POST | /oauth/admin/client/remove | delete client      | `id` in query | redirects `back`
-
 ## Dialog Data
 When the **Dialog Handler** is called the `$.data`  object can have the following values based on what was sent to the `authorizationRequest` API Endpoint :
 
@@ -391,6 +382,15 @@ In order for the `Resource Owner` to be comfortable giving access to Client appl
  - If the Resource Owner is not logged in, a login form should be displayed. Login errors should be displayed in the dialog as well. On successfull login the Resource Owner should redirected to the Authorization Request.
  - Display the required scopes so the Resource Owner knows what permissions he/she gives to the Client application. Not providing details about the permissions could make the owner think it requires permission to everything. Every scope required by the client should be displayed in detail.
  - Provide information about the Resource Owner like name, email or username. This is important since another user could be logged-in with the Resource Server or the Resource Owner might have multiple accounts at the Resource Server.
+
+## Experimental: Admin Endpoints
+These are the available routes when `consent('admin')` is set.  **Please note this is only for development! Do not use this in production!**
+
+| Method  | API    | Description   | Request Requirements | Response 
+| -------  | ------------| -----| -----| -----|
+| GET | /oauth/admin                | display all database informations, create and delete clients | | html
+| POST | /oauth/admin/client/create | create new client  | `id` in query | redirects `back`
+| POST | /oauth/admin/client/remove | delete client      | `id` in query | redirects `back`
 
 ### Todos
 - Implement the other 3 Authentication Grants: [Implicit](https://tools.ietf.org/html/rfc6749#section-1.3.2), [Resource Owner Password Credentials](https://tools.ietf.org/html/rfc6749#section-1.3.3) and [Client Credentials](https://tools.ietf.org/html/rfc6749#section-1.3.4).
