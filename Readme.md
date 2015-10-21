@@ -1,7 +1,7 @@
 
 # Consent
 
-Fast, lightweight, customizable [RFC 6749](https://tools.ietf.org/html/rfc6749) compliant\* [OAuth2](http://oauth.net/2/) server. Routes with [diet](http://dietjs.com/). Stores clients, grants and tokens with [mongodb](https://www.mongodb.org/).
+Fast, lightweight, customizable [RFC 6749](https://tools.ietf.org/html/rfc6749) compliant\* [OAuth2](http://oauth.net/2/) server. Runs on [diet](http://dietjs.com/). Stores clients, grants and tokens with [mongodb](https://www.mongodb.org/).
 
 ```javascript
 var app = require('diet')().listen(7000)
