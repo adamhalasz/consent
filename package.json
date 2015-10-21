@@ -1,0 +1,5 @@
+{
+    "name": "consent",
+    "version": "v0.1.0",
+    "description": "oauth2 server"
+}
