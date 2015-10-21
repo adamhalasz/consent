@@ -1,10 +1,10 @@
 
 # Consent
 
-Fast, lightweight, customizable [RFC 6749](https://tools.ietf.org/html/rfc6749) compliant* [OAuth2](http://oauth.net/2/) server. Routes with [diet](http://dietjs.com/). Stores clients, grants and tokens with [mongodb](https://www.mongodb.org/).
+Fast, lightweight, customizable [RFC 6749](https://tools.ietf.org/html/rfc6749) compliant\* [OAuth2](http://oauth.net/2/) server. Routes with [diet](http://dietjs.com/). Stores clients, grants and tokens with [mongodb](https://www.mongodb.org/).
 
 ```javascript
-var app = require('diet')().listen(8000)
+var app = require('diet')().listen(7000)
 
 var consent = require('consent')()
 	consent('app', app)
@@ -40,7 +40,7 @@ var consent = require('consent')()
  15. License
 
 ## Features:
-- *Support for **Authorization Code** Grant (1/4 of grants - the other's coming later)
+- \*Support for **Authorization Code** Grant (1/4 of grants - the other's coming later)
 - Integrates into Diet.js allowing to automatically convert every Session Protected Route into OAuth API's
 - MongoDB to store Grants, Tokens and Clients
 - New optional non-standard return type `pushMessage` to support OAuth in browser extensions
@@ -173,7 +173,7 @@ You'll need a diet server instance and some other configuration like the mongodb
 ```javascript
 // Create a Diet Server Instance
 var app = require('diet')()
-app.listen('http://localhost:8000')
+app.listen('http://localhost:7000')
 // ...
      
 // Create Diet OAuth Server
@@ -231,7 +231,7 @@ https://example.com/oauth/authorizationRequest
 The following URL (API Endpoint) opens a dialog between the User and Client through our Diet OAuth Server. 
 ```
 // open the dialog
-curl http://localhost:8000/oauth/authorizationRequest
+curl http://localhost:7000/oauth/authorizationRequest
 ```
 
 ##### **Server: Respond with An HTML Dialog Screen**
