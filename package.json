@@ -1,5 +1,41 @@
 {
     "name": "consent",
-    "version": "v0.1.0",
-    "description": "oauth2 server"
+    "version": "v0.1.1",
+    "description": "Fast, lightweight, customizable RFC 6749 compliant OAuth2 server. Works with diet and mongo.",
+    "keywords": [
+        "auth",
+        "oauth",
+        "oauth2",
+        "access_token",
+        "refresh_token",
+        "authorization",
+        "auth flow",
+        "mongo",
+        "authorization request",
+        "authorization code",
+        "authorization grant",
+        "authorization server",
+        "resource server",
+        "rfc6749",
+        "6749"
+    ],
+    "bugs": {
+      "url": "http://github.com/adamhalasz/consent/issues",
+      "email": "mail@adamhalasz.com"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/adamhalasz/consent.git"
+    },
+    "license": "MIT",
+    "author": {
+      "name": "Halász Ádám",
+      "email": "mail@adamhalasz.com",
+      "url": "http://adamhalasz.com/"
+    },
+    "dependencies": {
+        "async": "^1.4.2",
+        "mongoose": "^4.1.11",
+        "uid": "0.0.2"
+    }
 }
