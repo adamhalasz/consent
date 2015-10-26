@@ -23,9 +23,9 @@
 // =======================================================
 
 module.exports.requestAccess = function($, callback){
-    if($.header('Authorization')){
-        console.log('OAuth: Request Access', $.header('Authorization'))
-        var access_token = $.header('Authorization').split('Bearer ')[1];
+    if($.header('authorization')){
+        console.log('OAuth: Request Access', $.header('authorization'))
+        var access_token = $.header('authorization').split('Bearer ')[1];
         AccessToken.findOne({ value: access_token }, function(error, token){
             if(error) throw error;
             if(token){
@@ -199,7 +199,7 @@ module.exports.acceptAuthorizationRequest = function($) {
     }
 }
 
-module.exports.invalid_request = function invalid_request($){
+function invalid_request($){
     console.trace('Invalid Request')
     $.json({
         error: {
@@ -207,3 +207,5 @@ module.exports.invalid_request = function invalid_request($){
         }
     });
 }
+
+module.exports.invalid_request = invalid_request;

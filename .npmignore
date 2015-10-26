@@ -1,0 +1,5 @@
+*.esproj
+.git
+.gitignore
+.npmignore
+node_modules2/*

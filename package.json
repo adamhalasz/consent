@@ -1,6 +1,6 @@
 {
     "name": "consent",
-    "version": "v0.1.1",
+    "version": "v0.1.4",
     "description": "Fast, lightweight, customizable RFC 6749 compliant OAuth2 server. Works with diet and mongo.",
     "keywords": [
         "auth",
@@ -34,8 +34,8 @@
       "url": "http://adamhalasz.com/"
     },
     "dependencies": {
-        "async": "^1.4.2",
-        "mongoose": "^4.1.11",
+        "async": "1.4.2",
+        "mongoose": "4.1.11",
         "uid": "0.0.2"
     }
 }
